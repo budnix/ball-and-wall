@@ -91,44 +91,7 @@ function(core, i18, gameOptions, md5) {
      * @method silentLogin
      */
     Player.prototype.silentLogin = function() {
-        if ( gameOptions.get('player:social') == 'google' && typeof gapi !== 'undefined' ) {
-            gapi.auth.authorize({
-                client_id: GOOGLE_CLIENT_ID,
-                immediate: true,
-                response_type: 'token',
-                scope: ['https://www.googleapis.com/auth/plus.me']
-            }, $.proxy(function(result) {
-                if ( result && result.access_token ) {
-                    gameOptions.set('player', {
-                        ac: result.access_token
-                    });
-                } else {
-                    gameOptions.set('player', {
-                        ac: null,
-                        name: null,
-                        social: null
-                    });
-                }
-                this._auth('login', null, true);
-            }, this));
-        } else if ( gameOptions.get('player:social') == 'facebook' && typeof FB !== 'undefined' ) {
-            FB.getLoginStatus($.proxy(function(result) {
-                if ( result && result.authResponse && result.authResponse.accessToken ) {
-                    gameOptions.set('player', {
-                        ac: result.authResponse.accessToken
-                    });
-                } else {
-                    gameOptions.set('player', {
-                        ac: null,
-                        name: null,
-                        social: null
-                    });
-                }
-                this._auth('login', null, true);
-            }, this), {scope: 'user_about_me'});
-        } else {
-            this._auth('login', null, true);
-        }
+        this._auth('login', null, true);
     };
 
     /**

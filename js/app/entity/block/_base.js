@@ -27,7 +27,7 @@ function(Base, preloader, episode) {
      * @param {Number} typeId
      */
     BlockBase.prototype.init = function(typeId) {
-        var types = episode.getBlocks();
+        var types = episode.getBlocks(), ss;
         
         if ( !types[typeId] ) {
             return;
@@ -39,7 +39,7 @@ function(Base, preloader, episode) {
             this.type.animation.images = [
                 preloader.get('c-block-' + this.type.texture + '-anim')
             ];
-            var ss = new createjs.SpriteSheet(this.type.animation);
+            ss = new createjs.SpriteSheet(this.type.animation);
             Base.prototype.init.call(this, new createjs.BitmapAnimation(ss));
         } else {
             Base.prototype.init.call(this, 
@@ -164,11 +164,11 @@ function(Base, preloader, episode) {
      * @param {Object} event
      */
     BlockBase.prototype.update = function(event) {
+        var _this = this, image;
+
         if ( !this.type.destroyable ) {
             return;
         }
-        var _this = this;
-        
         this.hit();
 
         if ( this.hits >= this.type.hardness ) {
@@ -187,8 +187,7 @@ function(Base, preloader, episode) {
 
             return;
         }
-        var image = new Image();
-        
+        image = new Image();
         image.src = preloader.get('c-block-' + this.type.texture + '-' + (this.hits + 1)).src;
         this.bitmap.image = image;
     };

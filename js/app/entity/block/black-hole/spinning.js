@@ -64,15 +64,15 @@ function(BaseBlock, core, stage) {
             }
             if ( blackHoleCenter > ballAngle || blackHoleCenter < ballAngle - Math.PI ) {
                 ballAngle = ballAngle + force;
-                
-                // zabezpieczenie przed 'plaskim' katem pilki
+
+                // security for 'flat' ball angle
                 if ( ballAngle < force && ballAngle > -force ) {
                     ballAngle = ballAngle + force;    
                 }
             } else {
                 ballAngle = ballAngle - force;
                 
-                // zabezpieczenie przed 'plaskim' katem pilki
+                // security for 'flat' ball angle
                 if ( ballAngle < force && ballAngle > -force ) {
                     ballAngle = ballAngle - force;
                 }
