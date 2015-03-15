@@ -34,7 +34,7 @@ function(BaseBlock, core, stage, episode) {
     };
     
     /**
-     * @methos setMode
+     * @method setMode
      * @param {String} mode addictive|repulsive
      */
     BlackHoleUnstable.prototype.setMode = function(mode) {

@@ -38,7 +38,9 @@ function(BaseBlock, episode) {
             block;
     
         if ( types[typeId].entity ) {
-            block = require('app/entity/block/' + types[typeId].entity).createNew({type: $.extend(types[typeId], {id: typeId})});
+            block = require('app/entity/block/' + types[typeId].entity).createNew({
+                type: $.extend(types[typeId], {id: typeId})
+            });
         } else {
             block = new Block();
             block.init(typeId);

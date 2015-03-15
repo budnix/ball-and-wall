@@ -3,10 +3,10 @@ define('app/levels-editor',
 [
     'app/stage', 'app/entity/_', 'app/entities/_', 'app/levels', 'app/game-options',
     'app/preloader', 'app/dashboard', 'app/core/_', 'app/episodes/_', 'app/input/_', 'app/i18/_',
-    'app/window/_', 'fancyselect'
+    'app/window/_', 'md5', 'fancyselect'
 ], 
 function(stage, entity, entities, levels, gameOptions, preloader, dashboard, core, episode, input, i18, 
-        _window) {
+        _window, md5) {
     
     function LevelsEditor() {
         dashboard.disabled(true);
@@ -199,7 +199,7 @@ function(stage, entity, entities, levels, gameOptions, preloader, dashboard, cor
     LevelsEditor.prototype.saveLevel = function(level) {
         $.ajax({
             dataType: 'json',
-            url: FULLADDR + 'level/' + hex_md5(level) + '.html',
+            url: FULLADDR + 'level/' + md5(level) + '.html',
             method: 'post',
             data: {
                 level: level
@@ -498,7 +498,7 @@ function(stage, entity, entities, levels, gameOptions, preloader, dashboard, cor
                 this.saveLevel(this.getLevel());
             }
             core.helperShare.open(type.replace('share-', ''), {
-                url: encodeURIComponent(FULLADDR + 'level/' + hex_md5(this.getLevel()) + '.html'),
+                url: encodeURIComponent(FULLADDR + 'level/' + md5(this.getLevel()) + '.html'),
                 title: encodeURIComponent(core.utilsString.substitute(i18._('le-share-title'), {}))
             });
         }

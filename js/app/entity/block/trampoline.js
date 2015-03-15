@@ -1,9 +1,9 @@
 
 define('app/entity/block/trampoline', 
 [
-    'app/entity/block/_base', 'app/entity/_base', 'app/game-options', 'app/stage', 'app/preloader', 'app/episodes/_', 'app/sound'
+    'app/entity/block/_base', 'app/entity/_base', 'app/game-options', 'app/stage', 'app/preloader', 'app/episodes/_'
 ], 
-function(BlockBase, Base, gameOptions, stage, preloader, episode, sound) {
+function(BlockBase, Base, gameOptions, stage, preloader, episode) {
     
     var
         /**
@@ -127,11 +127,11 @@ function(BlockBase, Base, gameOptions, stage, preloader, episode, sound) {
      * @method release
      */
     Trampoline.prototype.release = function() {
+        var _this = this, d = 200;
+
         if ( this.animating ) {
             return this;
         }
-        var _this = this, d = 200;
-        
         this.animating = true;
         
         createjs.Tween.get(this).to({height: 56}, d, createjs.Ease.elasticOut).call(function() {
