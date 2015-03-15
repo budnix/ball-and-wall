@@ -1,0 +1,162 @@
+
+a {
+    color: #01080e;
+}
+body {
+    background-color: #000 !important;
+}
+canvas#a-game-canvas {
+    border: 5px solid #183c67;
+}
+/*canvas#a-game-dashboard {
+    top: -13px;
+    left: -135px;
+}*/
+#a-game-canvases {
+    padding-top: 130px;
+}
+#a-game-bottom-line {
+    display: block;
+}
+#a-container {
+    padding-bottom: 120px;
+}
+#a-auth, #a-level-editor {
+    position: absolute;
+    display: block;
+    border-radius: 7px/17px;
+    -moz-border-radius: 7px/17px;
+    -webkit-border-radius: 7px/17px;
+    padding: 9px 0 8px 0;
+    font-size: 13px;
+    font-weight: bold;
+    color: #FFF;
+    text-align: center;
+    border: 1px solid #183c67;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#a-auth {
+    right: -2px;
+    top: 66px;
+    width: 235px;
+}
+#a-level-editor {
+    color: #eee;
+    right: -2px;
+    top: 9px;
+    width: 135px;
+    font-weight: normal;
+    border-right: none;
+    padding: 0 0 1px 0;
+}
+.rights, .rights a {
+    color: #888;
+    font-size: 13px;
+}
+
+.radio .option-item-entry {
+    background: transparent url('../../images/episodes/space/radio-checked-false.png') 98% 50% no-repeat scroll;
+}
+.radio .option-item-entry.min {
+    background: transparent url('../../images/episodes/space/radio-checked-false-min.png') 98% 50% no-repeat scroll;
+}
+.radio .option-item-entry.selected {
+    background: #ddd url('../../images/episodes/space/radio-checked-true.png') 98% 50% no-repeat scroll;
+}
+.radio .option-item-entry.min.selected {
+    background: #ddd url('../../images/episodes/space/radio-checked-true-min.png') 98% 50% no-repeat scroll;
+}
+.checkbox .option-item-entry {
+    background: transparent url('../../images/episodes/space/checkbox-checked-false.png') 98% 50% no-repeat scroll;
+}
+.checkbox .option-item-entry.min {
+    background: transparent url('../../images/episodes/space/checkbox-checked-false-min.png') 98% 50% no-repeat scroll;
+}
+.checkbox .option-item-entry.selected {
+    background: #ddd url('../../images/episodes/space/checkbox-checked-true.png') 98% 50% no-repeat scroll;
+}
+.checkbox .option-item-entry.min.selected {
+    background: #ddd url('../../images/episodes/space/checkbox-checked-true-min.png') 98% 50% no-repeat scroll;
+}
+.tab-contents {
+    height: 347px;
+}
+.tab-buttons {
+    box-shadow: 0 0 5px #2C6594;
+    -webkit-box-shadow: 0 0 5px #2C6594;
+    -moz-box-shadow: 0 0 5px #2C6594;
+}
+.tab-buttons a {
+    background-color: #3D7AAD;
+}
+.tab-buttons a.tab-selected {
+    border-top: 1px solid #2c6594;
+}
+
+/** windows **/
+.lbx-window {
+    background-color: #eee;
+    box-shadow: 0 0 35px #2c6594;
+    -webkit-box-shadow: 0 0 35px #2c6594;
+    -moz-box-shadow: 0 0 35px #2c6594;
+}
+.lbx-overlay {
+    background-color: #000;
+}
+.lbx-overlay-preloader-indicator {
+    z-index: 195;
+}
+.lbx-header, .lbx-footer {
+    background-color: #2C6594;
+    border-bottom: 1px solid #2C6594;
+    color: white;
+    box-shadow: 0 0 5px #2c6594;
+    -webkit-box-shadow: 0 0 5px #2c6594;
+    -moz-box-shadow: 0 0 5px #2c6594;
+}
+
+/** auth window **/
+.lbx-auth .register.lbx-header, .lbx-auth .register.lbx-footer {
+    background-color: #91b57b;
+    box-shadow: 0 0 5px #91b57b;
+    -webkit-box-shadow: 0 0 5px #91b57b;
+    -moz-box-shadow: 0 0 5px #91b57b;
+    border-bottom-color: #91b57b;
+}
+.lbx-auth.register.lbx-window {
+    box-shadow: 0 0 35px #91b57b;
+    -webkit-box-shadow: 0 0 35px #91b57b;
+    -moz-box-shadow: 0 0 35px #91b57b;
+}
+.lbx-auth .tab-contents {
+    height: 347px;
+}
+
+/** auth-dashboard window **/
+.lbx-auth-dashboard .row-central ul {
+    margin-top: 4.25%;
+}
+.lbx-auth-dashboard .stats-results .change-filtr {
+    right: 15px;
+    bottom: 12px;
+}
+
+/* lbx preloader indicator */
+.lbx-preloader-indicator .tab-contents {
+    background: #000 url('../../images/episodes/space/preloader-bg.jpg') no-repeat center center scroll;
+}
+.lbx-preloader-indicator .body-cont {
+    color: #fff;
+    font-family: 'Quantico', sans-serif;
+    font-size: 24px;
+}
+
+/** options window **/
+.lbx-options .tab-contents {
+    height: 326px;
+}
+
+/** help window **/
+.lbx-help .tab-contents {
+    height: 326px;
+}

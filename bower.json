@@ -1,0 +1,18 @@
+{
+  "name": "ball-and-wall",
+  "version": "1.0.0",
+  "homepage": "https://github.com/budnix/ball-and-wall",
+  "authors": [
+    "Krzysztof Budnik <budnix@gmail.com>"
+  ],
+  "description": "Arkanoid style game",
+  "keywords": [
+    "arkanoid"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "q": "1.0.1",
+    "fancyselect": "~1.1.0",
+    "jquery": "~2.1.3"
+  }
+}

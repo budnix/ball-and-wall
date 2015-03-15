@@ -1,0 +1,14 @@
+{
+  "name": "fancyselect",
+  "homepage": "https://github.com/octopuscreative/FancySelect",
+  "_release": "aec640a0b4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "aec640a0b4c597830abd1bfc94e40f165d12d28e"
+  },
+  "_source": "git://github.com/octopuscreative/FancySelect.git",
+  "_target": "*",
+  "_originalSource": "fancyselect",
+  "_direct": true
+}

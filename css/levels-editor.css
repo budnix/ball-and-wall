@@ -1,0 +1,181 @@
+
+canvas {
+    cursor: auto;
+}
+#a-container {
+    text-align: left;
+}
+#dashboard {
+    visibility: hidden;
+    background: transparent none top left scroll no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    padding: 15px;
+}
+#space #dashboard {
+    background-image: url(../images/episodes/space/editor-side-bg.png);
+}
+#pegasus #dashboard {
+    background-image: url(../images/episodes/pegasus/editor-side-bg.png);
+}
+.class-levels-editor-page #a-game-canvases {
+    width: 1090px;
+}
+.class-levels-editor-page #a-game-canvas {
+    display: inline-block;
+}
+
+.edit-header {
+    font-family: 'Orion-Pax', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    padding: 13px 0 27px 0;
+}
+#space .edit-header {
+    color: #eee;    
+}
+#pegasus .edit-header {
+    color: #222;
+}
+.episodes-header, .static-blocks-header, .interactive-blocks-header, .actions-header {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#space .episodes-header, #space .static-blocks-header, #space .interactive-blocks-header, #space .actions-header {
+    color: #eee;    
+}
+#pegasus .episodes-header, #pegasus .static-blocks-header, #pegasus .interactive-blocks-header, #pegasus .actions-header {
+    color: #222;    
+}
+.episodes-header {
+    border-top: 1px dotted #183c67    
+}
+.static-blocks-header {
+    margin-top: 20px;
+    border-top: 1px dotted #183c67    
+}
+.actions-header {
+    margin-top: 45px;
+    margin-bottom: 10px;
+    border-top: 1px dotted #183c67
+}
+.blocks-header {
+    margin-top: 10px;
+}
+.static-block, .interactive-block {
+    position: relative;
+    display: inline-block;
+    margin: 0 3px;
+}
+#space .static-block {
+    height: 27px;
+}
+#pegasus .static-block {
+    height: 44px;
+}
+#space .interactive-block {
+    width: 44px;
+    height: 44px;
+}
+#pegasus .interactive-block {
+    width: 44px;
+    height: 44px;
+}
+#black-hole-spinning, #black-hole-unstable {
+    background-color: #fff;
+}
+.block.selected {
+    margin: -3px 0 0 0;
+    border: 3px solid #ffd200;
+}
+.interactive-block .availability {
+    position: absolute;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000;
+    left: 3px;
+    top: 3px;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+.interactive-block .availability:hover {
+    color: #000;
+}
+.interactive-block.selected {
+    margin: 0 3px;
+    border: 3px solid #ffd200;
+}
+.interactive-block.selected img {
+    padding-bottom: 3px;
+}
+.btn-holder {
+    margin: auto;
+    width: 80%;
+}
+.btn-holder .level-editor-btn, .btn-holder .level-editor-btn-back {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.btn-holder .level-editor-btn-back {
+    background-color: #767676;
+    border-color: #767676;
+    font-size: 13px;
+}
+.btn-holder .level-editor-btn-back:hover {
+    background-color: #8d8d8d;
+    border-color: #8d8d8d;
+}
+.share-holder {
+    z-index: 1;
+    position: absolute;
+/*    display: none;
+    opacity: 0;*/
+    margin-top: -46px;
+    width: 400px;
+    margin-left: 0;
+}
+.share-holder .level-editor-btn {
+    width: 59px;
+}
+.share-holder .share-facebook {
+    background-color: #3b5998;
+    border: 1px solid #3b5998;
+}
+.share-holder .share-facebook a {
+    color: #fff;
+}
+.share-holder .share-facebook:hover {
+    background-color: #4c70ba;
+}
+.share-holder .share-twitter {
+    background-color: #00aced;
+    border: 1px solid #00aced;
+}
+.share-holder .share-twitter a {
+    color: #fff;
+}
+.share-holder .share-twitter:hover {
+    background-color: #21c2ff;
+}
+.share-holder .share-google {
+    color: #fff;
+    background-color: #ca3838;
+    border: 1px solid #ca3838;
+}
+.share-holder .share-google a {
+    color: #fff;
+}
+.share-holder .share-google:hover {
+    background-color: #d56060;
+}
+/** fancyselect **/
+.fancy-select .trigger {
+    width: 100% !important;
+}
