@@ -45,13 +45,14 @@ function(stage,
         this.applyI18();
         preloader.load();
         
+        this.windowAuth = new _window.Auth();
+        this.windowFirstTime = new _window.FirstTime();
         this.windowGames = new _window.Games();
-        this.windowOptions = new _window.Options();
         this.windowHelp = new _window.Help();
+        this.windowOptions = new _window.Options();
+        this.windowOrientationIndicator = new _window.OrientationIndicator();
         this.windowRounds = new _window.Rounds();
         this.windowRoundWin = new _window.RoundWin();
-        this.windowFirstTime = new _window.FirstTime();
-        this.windowOrientationIndicator = new _window.OrientationIndicator();
         
         this.onWindowResize();
         this.onWindowOrientationChange();
@@ -75,25 +76,27 @@ function(stage,
         }
         $('#' + stage.stage.canvas.id).bind('click', $.proxy(this.onStageClick, this));
         $('#a-auth').bind('click', $.proxy(this.onBtnUserClick, this));
+        this.windowAuth.addListener('clickLogin', $.proxy(this.onWindowAuthClickLogin, this));
+        this.windowAuth.addListener('clickRegister', $.proxy(this.onWindowAuthClickRegister, this));
+        this.windowFirstTime.addListener('close', $.proxy(this.onWindowFirstTimeClose, this));
         this.windowGames.addListener('selectEpisode', $.proxy(this.onWindowGamesSelectEpisode, this));
         this.windowRounds.addListener('back', $.proxy(this.onWindowRoundsBack, this));
         this.windowRounds.addListener('play', $.proxy(this.onWindowRoundsPlayGame, this));
-        this.windowRoundWin.addListener('retryRound', $.proxy(this.onWindowRoundWinRetryRound, this));
-        this.windowRoundWin.addListener('nextRound', $.proxy(this.onWindowRoundWinNextRound, this));
         this.windowRoundWin.addListener('goToEpisodes', $.proxy(this.onWindowStatsGoToEpisodes, this));
         this.windowRoundWin.addListener('goToRounds', $.proxy(this.onWindowGamesSelectEpisode, this));
-        this.windowFirstTime.addListener('close', $.proxy(this.onWindowFirstTimeClose, this));
+        this.windowRoundWin.addListener('nextRound', $.proxy(this.onWindowRoundWinNextRound, this));
+        this.windowRoundWin.addListener('retryRound', $.proxy(this.onWindowRoundWinRetryRound, this));
         core.mediator.addListener('game:game-over', $.proxy(this.onGameOver, this));
         core.mediator.addListener('game:stage-clear', $.proxy(this.onGameClearStage, this));
-        dashboard.addListener('clickPlay', $.proxy(this.onBtnStartGameClick, this));
-        dashboard.addListener('clickOptions', $.proxy(this.onBtnOptionsClick, this));
         dashboard.addListener('clickHelp', $.proxy(this.onBtnHelpClick, this));
+        dashboard.addListener('clickOptions', $.proxy(this.onBtnOptionsClick, this));
+        dashboard.addListener('clickPlay', $.proxy(this.onBtnStartGameClick, this));
         dashboard.addListener('clickUser', $.proxy(this.onBtnUserClick, this));
+        gameOptions.addListener('change:window-games', $.proxy(this.onEpisodeChange, this));
         player.addListener('login', $.proxy(this.onPlayerLogin, this));
         player.addListener('logout', $.proxy(this.onPlayerLogout, this));
         player.addListener('register', $.proxy(this.onPlayerRegister, this));
         preloader.addListener('complete', $.proxy(this.onPreloaderComplete, this));
-        gameOptions.addListener('change:window-games', $.proxy(this.onEpisodeChange, this));
     };
     
     /**
@@ -296,8 +299,22 @@ function(stage,
         // Support for logged players
         if ( event.result == 'ok' ) {
             dashboard.getAuth().login(event.response);
+
+            if ( !event.silentMode ) {
+                this.windowAuthDashboard.open();
+            }
+            indicator.hide();
         } else {
             dashboard.getAuth().logout();
+
+            if ( event.silentMode ) {
+                indicator.hide();
+            } else {
+                setTimeout($.proxy(function() {
+                    this.windowAuth.open('login', true);
+                    indicator.hide();
+                }, this), 1000);
+            }
         }
     };
     
@@ -305,7 +322,7 @@ function(stage,
      * @method onPlayerLogout
      */
     Game.prototype.onPlayerLogout = function() {
-
+        indicator.hide();
     };
     
     /**
@@ -316,8 +333,19 @@ function(stage,
         // Support for register players
         if ( event.result == 'ok' ) {
             dashboard.getAuth().login(event.response);
+            this.windowAuthDashboard.open();
+            indicator.hide();
         } else {
             dashboard.getAuth().logout();
+
+            if ( event.silentMode ) {
+                indicator.hide();
+            } else {
+                setTimeout($.proxy(function() {
+                    this.windowAuth.open('register', true);
+                    indicator.hide();
+                }, this), 1000);
+            }
         }
     };
     
@@ -371,6 +399,9 @@ function(stage,
     Game.prototype.onBtnUserClick = function(event) {
         if ( event ) {
             event.preventDefault();
+        }
+        if ( !player.isLogged() ) {
+            this.windowAuth.open('login');
         }
     };
     
@@ -433,6 +464,27 @@ function(stage,
             levels: levels.getLevelNames()
         });
     };
+
+    // WindowAuth
+    /**
+     * @method onWindowAuthClickLogin
+     * @param {Object} loginData
+     */
+    Game.prototype.onWindowAuthClickLogin = function(loginData) {
+        indicator.show();
+        player.login(loginData);
+    };
+
+    /**
+     * @method onWindowAuthClickRegister
+     * @param {Object} registerData
+     */
+    Game.prototype.onWindowAuthClickRegister = function(registerData) {
+        indicator.show();
+        player.register(registerData);
+    };
+
+    // WindowFirstTime
 
     /**
      * @method onWindowFirstTimeClose

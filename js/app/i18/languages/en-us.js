@@ -6,8 +6,8 @@ define('app/i18/languages/en-us',
 function() {
 
     return {
-        'cookie-info': 'This site uses cookies. By using this site you accept <a href="http://ballandwall.com/policy-privacy.html">privacy policy</a> and you agree to use cookies according to actual web browser settings.<div class="small primary btn"><a href="#">Yes, I understand.</a></div>',
-        'usage-data-info': 'This app collect anonymouse stats like app views, time spent on game etc. <br/>By using this game you accept <a target="_blank" href="http://ballandwall.com/policy-privacy.html">privacy policy</a>. <label for="a" style="font-weight: bold"><input id="a" type="checkbox"/> Send anonymous usage data.</label><div class="small primary btn"><a href="#">Close</a></div>',
+        'cookie-info': 'This site uses cookies. By using this site you accept privacy policy and you agree to use cookies according to actual web browser settings.<div class="small primary btn"><a href="#">Yes, I understand.</a></div>',
+        'usage-data-info': 'This app collect anonymouse stats like app views, time spent on game etc. <br/>By using this game you accept privacy policy. <label for="a" style="font-weight: bold"><input id="a" type="checkbox"/> Send anonymous usage data.</label><div class="small primary btn"><a href="#">Close</a></div>',
         'back-to-main-page': 'Back to main page',
         'not-supported': 'Not supported',
         'on': 'On',
@@ -75,9 +75,9 @@ function() {
         'time-range:last-week': 'Last week',
         'time-range:all-time': 'All time',
         // auth window - login and register
-        'auth-register-info': 'Register your player name by registering in <strong>ballandwall.com</strong> you will get access to functionalities that only registered users have.',
+        'auth-register-info': 'Register your player name by registering in <strong>Ball And Wall</strong> you will get access to functionalities that only registered users have.',
         'auth-register-error': 'Wrong data entered. Check login or password and try again<br/>or try use another nickname.',
-        'auth-login-info': 'Login as a player in <strong>ballandwall.com</strong> or if you don\'t have account yet register with link "Go to register form".',
+        'auth-login-info': 'Login as a player in <strong>Ball And Wall</strong> or if you don\'t have account yet register with link "Go to register form".',
         'auth-login-error': 'Wrong data entered. <br/>Check login or password and try again.',
         'auth-nickname': 'Login',
         'auth-nickname-placeholder': 'Type player nickname here',

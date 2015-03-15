@@ -6,8 +6,8 @@ define('app/i18/languages/pl',
 function() {
 
     return {
-        'cookie-info': 'Ta strona używa ciasteczek (cookies). Korzystając ze strony akceptujesz <a href="http://ballandwall.com/policy-privacy.html">politykę prywatności</a> oraz wyrażasz zgodę na używanie ciasteczek zgodnie z aktualnymi ustawieniami przeglądarki<div class="small primary btn"><a href="#">Tak, rozumiem</a></div>',
-        'usage-data-info': 'Ta aplikacja zbiera anonimowe dane dotyczące jej używania tj. liczba uruchomień, czas spędzony w grze itp. <br/>Korzystając z gry akceptujesz <a target="_blank" href="http://ballandwall.com/policy-privacy.html">politykę prywatności</a>. <label for="a" style="font-weight: bold"><input id="a" type="checkbox"/> Wysyłaj anonimowe statystyki.</label><div class="small primary btn"><a href="#">Zamknij</a></div>',
+        'cookie-info': 'Ta strona używa ciasteczek (cookies). Korzystając ze strony akceptujesz politykę prywatności oraz wyrażasz zgodę na używanie ciasteczek zgodnie z aktualnymi ustawieniami przeglądarki<div class="small primary btn"><a href="#">Tak, rozumiem</a></div>',
+        'usage-data-info': 'Ta aplikacja zbiera anonimowe dane dotyczące jej używania tj. liczba uruchomień, czas spędzony w grze itp. <br/>Korzystając z gry akceptujesz politykę prywatności. <label for="a" style="font-weight: bold"><input id="a" type="checkbox"/> Wysyłaj anonimowe statystyki.</label><div class="small primary btn"><a href="#">Zamknij</a></div>',
         'back-to-main-page': 'Wróć do strony głównej',
         'not-supported': 'Nie obsługiwane',
         'on': 'Włączone',
@@ -75,7 +75,7 @@ function() {
         'time-range:last-week': 'Ostatni tydzień',
         'time-range:all-time': 'Cały czas',
         // auth window - login and register
-        'auth-register-info': 'Rejestrując się w <strong>ballandwall.com</strong> uzyskasz dostęp do funkcjonalności oferowanych tylko zarejestrowanym użytkownikom.',
+        'auth-register-info': 'Rejestrując się w <strong>Ball And Wall</strong> uzyskasz dostęp do funkcjonalności oferowanych tylko zarejestrowanym użytkownikom.',
         'auth-register-error': 'Wprowadzone dane są błędne. Sprawdź poprawność loginu lub hasła lub zarejestruj się używając innej nazwy gracza.',
         'auth-login-info': 'Zaloguj się jako gracz w serwisie lub jeśli nie masz jeszcze konta zarejestruj się klikając w link "Przejdź do formularza rejestracji".',
         'auth-login-error': 'Wprowadzone dane są błędne. Sprawdź poprawność <br/>loginu i/lub hasła i spróbuj ponownie.',

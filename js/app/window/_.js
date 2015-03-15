@@ -2,6 +2,7 @@
 define('app/window/_', [
     'app/window/_base',
     'app/window/alert',
+    'app/window/auth',
     'app/window/confirm',
     'app/window/episode-win',
     'app/window/first-time',
@@ -13,12 +14,13 @@ define('app/window/_', [
     'app/window/rounds',
     'app/window/round-win'
 ], 
-function(Base, Alert, Confirm, EpisodeWin, FirstTime, Games, Help, Options,
+function(Base, Alert, Auth, Confirm, EpisodeWin, FirstTime, Games, Help, Options,
          OrientationIndicator, PreloaderIndicator, Rounds, RoundWin) {
 
     return {
         Base: Base,
         Alert: Alert,
+        Auth: Auth,
         Confirm: Confirm,
         EpisodeWin: EpisodeWin,
         FirstTime: FirstTime,

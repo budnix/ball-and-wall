@@ -1,9 +1,9 @@
 
 define('app/player', 
 [
-    'app/core/_', 'app/i18/_', 'app/game-options'
+    'app/core/_', 'app/i18/_', 'app/game-options', 'md5'
 ], 
-function(core, i18, gameOptions) {
+function(core, i18, gameOptions, md5) {
 
     var 
         /**
@@ -267,7 +267,7 @@ function(core, i18, gameOptions) {
      * @return {String}
      */
     Player.prototype._getHash = function(password) {
-        return hex_md5(password);
+        return md5(password);
     };
 
     /**
