@@ -241,5 +241,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-processhtml');
 
 
-    grunt.registerTask('default', ['jshint', 'concat', 'uglify', 'cssmin', 'processhtml', 'clean']);
+    grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'cssmin', 'processhtml', 'clean']);
 };
