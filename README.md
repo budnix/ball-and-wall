@@ -12,7 +12,7 @@ Demo available at http://budnix.github.io/ball-and-wall/ and extended version us
 
 ## Usage
 
-After download source code install dependencies via bower:
+After downloading source code install dependencies via bower:
 
 ```sh
 $ bower install
@@ -26,11 +26,11 @@ $ npm install
 
 Files with `_dev.html` postfix use uncompressed assets designed to development proposes.
 
-To build production version simply run:
+Run `grunt build` to build/update production files (`index.html` and `levels-editor.html`).
 
-```sh
-$ grunt build
-```
+Game has 2 episodes called space and pegasus. Space assets (images) were made by me and they are totally FREE.
+Pegasus images were bought from http://graphicriver.net/item/platformer-game-tile-set/3677579 so if you want use
+this images you must pay for it's license.
 
 ## License
 
