@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ball And Wall - Simple arkanoid style game</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Ball And Wall (html5 game) - Simple arkanoid style game with nice graphics and cool gameplay">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta property="og:site_name" content="Ball And Wall">
+    <meta property="og:title" content="Ball And Wall">
+    <meta property="og:url" content="http://ballandwall.com/">
+    <meta property="og:title" content="Ball And Wall">
+    <meta property="og:image" content="images/icons/128x128.png">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="homescreen.png">
+    <link rel="apple-touch-icon-precomposed" href="homescreen.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="homescreen-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="homescreen-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="homescreen-144.png">
+
+    <link rel="stylesheet" href="dist/common.css">
+    <script src="js/_config_prod.js"></script>
+    <script src="js/lib/require/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: SS + 'js',
+            paths: {
+                fancyselect: '../bower_components/fancyselect/fancySelect',
+                q: '../bower_components/q/q',
+                md5: '../bower_components/js-md5/js/md5.min'
+            }
+        });
+    </script>
+</head>
+<body oncontextmenu="return false;" class="class-index-page">
+    <div id="indicator-container">
+        <img src="images/indicator.gif" alt="Loading ..." />
+    </div>
+    <div id="a-auth-wrapper">
+        <a href="levels-editor.html" id="a-level-editor"></a>
+    </div>
+    <div id="a-container">
+        <div id="a-game-wrapper">
+            <div id="a-game-canvases">
+                <canvas id="a-game-dashboard" width="417" height="214" ></canvas>
+                <canvas id="a-game-canvas" width="798" height="462" >
+                    Your browser not supported this game
+                </canvas>
+            </div>
+            <div id="a-game-bottom-line"></div>
+        </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/lib/createjs/createjs.min.js"></script>
+    <script src="js/lib/createjs/soundjs-0.5.2.min.js"></script>
+    <script src="dist/output.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

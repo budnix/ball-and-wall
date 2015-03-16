@@ -1,0 +1,51 @@
+
+@font-face {
+    font-family: 'segmentled';
+    src: url('../fonts/segmentled.eot');
+    src: url('../fonts/segmentled.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/segmentled.woff') format('woff'),
+         url('../fonts/segmentled.ttf') format('truetype'),
+         url('../fonts/segmentled.svg#segmentled') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Orion-Pax';
+    src: url('../fonts/Orion-Pax.eot');
+    src: url('../fonts/Orion-Pax.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Orion-Pax.woff') format('woff'),
+        url('../fonts/Orion-Pax.ttf') format('truetype'), 
+        url('../fonts/Orion-Pax.svg#Orion-Pax') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Quantico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quantico'), local('Quantico-Regular'), url(../fonts/Quantico.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/OpenSansLight/OpenSans-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/OpenSansRegular/OpenSans-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/OpenSansSemibold/OpenSans-Semibold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/OpenSansBold/OpenSans-Bold.woff) format('woff');
+}

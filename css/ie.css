@@ -1,0 +1,13 @@
+.skin_item div.label_bg {
+    position: static;
+}
+
+#beta_text {
+    box-shadow: none;
+}
+
+.lbx_window, .lbx_header, .lbx_container #exit, #menu_button, #menu_content a,
+#game_status a, .tab_buttons, .tab_buttons a.tab_selected, .tab_contents,
+.tab_contents .selected, .radio .selected, .checkbox .selected, .theme_item_navi {
+    box-shadow: none;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ball And Wall - Simple arkanoid style game</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Ball And Wall (html5 game) - Simple arkanoid style game with nice graphics and cool gameplay">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta property="og:site_name" content="Ball And Wall">
+    <meta property="og:title" content="Ball And Wall">
+    <meta property="og:url" content="http://ballandwall.com/">
+    <meta property="og:title" content="Ball And Wall">
+    <meta property="og:image" content="images/icons/128x128.png">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="homescreen.png">
+    <link rel="apple-touch-icon-precomposed" href="homescreen.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="homescreen-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="homescreen-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="homescreen-144.png">
+
+    <!-- build:css dist/common.css -->
+    <link rel="stylesheet" href="css/gumby.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/common.css" type="text/css" media="screen">
+    <link rel="stylesheet" media="only screen and (min-width: 1100px) and (min-height: 651px)" href="css/1280.css">
+    <link rel="stylesheet" media="only screen and (min-width: 1100px) and (max-height: 650px)" href="css/1280-wide.css">
+    <link rel="stylesheet" media="only screen and (min-width: 960px) and (max-width: 1099px) and (min-height: 651px)" href="css/1024.css">
+    <link rel="stylesheet" media="only screen and (min-width: 960px) and (max-width: 1099px) and (max-height: 650px)" href="css/1024-wide.css">
+    <link rel="stylesheet" media="only screen and (min-width: 767px) and (max-width: 959px) and (min-height: 551px)" href="css/800.css">
+    <link rel="stylesheet" media="only screen and (min-width: 767px) and (max-width: 959px) and (max-height: 550px)" href="css/800-wide.css">
+    <link rel="stylesheet" media="only screen and (min-width: 560px) and (max-width: 766px) and (min-height: 451px)" href="css/640.css">
+    <link rel="stylesheet" media="only screen and (min-width: 560px) and (max-width: 766px) and (max-height: 450px)" href="css/640-wide.css">
+    <link rel="stylesheet" media="only screen and (max-width: 559px)" href="css/480.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape)" href="css/iphone5-landscape.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait)" href="css/iphone5-portrait.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)" href="css/ipad.css">
+    <link rel="stylesheet" media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2)" href="css/ipad-retina.css">
+    <!-- /build -->
+    <!-- build:css dist/levels-editor.css -->
+    <link rel="stylesheet" href="css/levels-editor.css">
+    <!-- /build -->
+    <link rel="stylesheet" href="bower_components/fancyselect/fancySelect.css" type="text/css" media="screen" />
+    <!-- build:js js/_config_prod.js -->
+    <script src="js/_config_dev.js"></script>
+    <!-- /build -->
+    <script src="js/lib/require/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: SS + 'js',
+            paths: {
+                fancyselect: '../bower_components/fancyselect/fancySelect',
+                q: '../bower_components/q/q',
+                md5: '../bower_components/js-md5/js/md5.min'
+            }
+        });
+    </script>
+</head>
+<body oncontextmenu="return false;" class="class-index-page">
+    <div id="indicator-container">
+        <img src="images/indicator.gif" alt="Loading ..." />
+    </div>
+    <div id="a-container">
+        <div id="a-game-wrapper">
+            <div id="a-game-canvases">
+                <canvas id="a-game-canvas" width="798" height="462" >
+                    Your browser not supported this game
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div id="dashboard">
+        <div>
+            <div class="edit-header">
+                Levels Editor
+            </div>
+            <div class="episodes-header">
+                Episodes:
+            </div>
+            <select class="episodes-select">
+                <option selected value="space">Space</option>
+                <option value="pegasus">Pegasus</option>
+            </select>
+            <div class="static-blocks-header">
+                Static bricks:
+            </div>
+            <div id="editor-static-blocks" class="static-blocks"></div>
+            <div class="interactive-blocks-header">
+                Interactive objects:
+            </div>
+            <div id="editor-interactive-blocks" class="interactive-blocks"></div>
+            <div class="actions-header"></div>
+            <div class="btn-holder">
+                <div class="medium default btn level-editor-btn" style="display: none;">
+                    <a id="btn-load-save" href="#">Load/Save</a>
+                </div>
+                <div class="medium success btn level-editor-btn">
+                    <a id="btn-play" href="#">Play</a>
+                </div>
+                <div class="medium warning btn level-editor-btn">
+                    <a id="btn-clear" href="#">Clear</a>
+                </div>
+                <div class="medium primary btn level-editor-btn">
+                    <a id="btn-share" href="#">Share</a>
+                </div>
+                <div class="share-holder">
+                    <div class="medium primary btn level-editor-btn share-facebook">
+                        <a id="btn-share-facebook" href="#">Facebook</a>
+                    </div>
+                    <div class="medium primary btn level-editor-btn share-twitter">
+                        <a id="btn-share-twitter" href="#">Twitter</a>
+                    </div>
+                    <div class="medium warning btn level-editor-btn share-google">
+                        <a id="btn-share-google" href="#">Google+</a>
+                    </div>
+                </div>
+                <div class="medium primary btn level-editor-btn-back">
+                    <a id="btn-back" href="#">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/lib/createjs/createjs.min.js"></script>
+    <script src="js/lib/createjs/soundjs-0.5.2.min.js"></script>
+    <!-- build:js dist/output.min.js -->
+    <!-- /build -->
+    <script src="js/levels-editor.js"></script>
+</body>
+</html>

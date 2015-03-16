@@ -1,0 +1,252 @@
+
+.ads iframe {
+    width: 468px;
+    height: 60px;
+}
+
+#a-game-top-left-corner, #a-game-top-right-corner, #a-game-top, #a-game-bottom, 
+        #a-game-bottom-left-corner, #a-game-bottom-right-corner, #a-game-left, #a-game-right {
+    display: none;
+}
+
+.btn.medium, .skiplink.medium {
+    font-size: 10px;
+    font-size: 0.625rem;
+    height: 23px;
+    line-height: 21px;
+}
+
+#a-container {
+    padding-top: 0;
+}
+#a-game-canvas, #a-game-canvases {
+    width: 320px;
+}
+#a-auth-wrapper {
+    display: none;
+}
+#a-game-dashboard {
+    top: -10px;
+    left: 25px;
+    width: 268px;
+    display: inline !important;
+}
+#pegasus #a-game-dashboard {
+    top: 193px !important;
+    width: 320px !important;
+    display: inline !important;
+}
+
+.lbx-window {
+    width: 310px !important;
+}
+
+/** lbx-games **/
+.lbx-games {
+    height: 373px;
+}
+.lbx-games .games-window {
+    height: 233px;
+}
+.lbx-games .lbx-content {
+    height: 331px;
+}
+.lbx-games .game-button-cont div {
+    width: 50%;
+}
+.lbx-games .game-button-cont a {
+    padding-right: 28px !important;
+}
+.lbx-games .games-window .option-item .option-item-entry {
+    height: 56px;
+}
+.lbx-games .show-on-start .option-item-entry {
+    font-size: 9px;
+}
+.lbx-games .games-wrapper .game-button-cont {
+    margin-top: 8px !important;
+    padding-bottom: 5px !important;
+}
+.lbx-games .option-item .option-item-entry .levels-preview {
+    display: none !important;
+}
+
+/** lbx-rounds **/
+.lbx-rounds {
+    height: 373px;
+}
+.lbx-rounds .games-window {
+    height: 280px !important;
+}
+.lbx-rounds .games-wrapper .buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.lbx-rounds .lbx-content {
+    height: 331px;
+}
+.lbx-rounds .option-item-entry .round-name {
+    left: 9px;
+    width: 52px;
+    font-size: 8px;
+    line-height: 1.5;
+}
+.lbx-rounds .option-item-entry .round-preview {
+    width: 52px;
+}
+.lbx-rounds .games-window .option-item .option-item-entry {
+    height: 57px;
+    padding-left: 9px;
+}
+.lbx-rounds .games-wrapper .buttons {
+    margin-top: 8px !important;
+    padding-bottom: 5px !important;
+}
+
+/** lbx-auth **/
+.lbx-auth {
+    height: 376px;
+}
+.lbx-auth .tab-contents {
+    height: 333px !important;
+}
+.lbx-auth .auth-login .label-cont, .lbx-auth .auth-register .label-cont {
+    margin: 22px 0 14px 0;
+}
+.lbx-auth .auth-login .alert, .lbx-auth .auth-register .alert {
+    padding: 10px 0;
+    font-size: 0.785rem;
+    line-height: 1.5;
+}
+.lbx-auth .auth-login .or, .lbx-auth .auth-register .or {
+    margin: 0 4px;
+}
+.lbx-auth .auth-login .auth-link, .lbx-auth .auth-register .auth-link {
+    font-size: 10px;
+}
+
+/** lbx-options **/
+.lbx-options {
+    height: 366px;
+}
+.lbx-options .tab-contents {
+    height: 274px !important;
+}
+.lbx-options .tab-buttons a {
+    width: 132px;
+}
+
+/** lbx-help **/
+.lbx-help {
+    height: 366px;
+}
+.lbx-help .tab-contents {
+    height: 274px !important;
+}
+.lbx-help .tab-buttons a {
+    font-size: 12px;
+    width: 94px;
+    margin-left: 7px;
+}
+.lbx-help .contact .field .textarea {
+    height: 115px;
+}
+
+/** lbx-auth-dashboard **/
+.lbx-auth-dashboard.lbx-window {
+    height: 370px !important;
+}
+.lbx-auth-dashboard .tab-contents {
+    height: 278px;
+}
+.lbx-auth-dashboard .tab-buttons a {
+    font-size: 10px;
+    width: 101px;
+    margin-left: 2px;
+}
+.lbx-auth-dashboard .player-info p {
+    margin: 0 0 3px 0;
+}
+.lbx-auth-dashboard .row-logout {
+    margin-bottom: 10px;
+}
+.lbx-auth-dashboard .stats-results table {
+    font-size: 9px;
+    margin: 3px;
+}
+.lbx-auth-dashboard .stats-results th {
+    padding: 4px 8px;
+}
+
+/** lbx-episode-win **/
+.lbx-episode-win .tab-contents {
+    height: 309px;
+}
+
+/** lbx-win **/
+.lbx-win {
+    height: 308px;
+}
+.lbx-win .tab-contents {
+    height: 264px;
+}
+.lbx-win table {
+    width: 288px;
+    padding-left: 15px;
+    background: none;
+}
+.lbx-win td {
+    font-size: 16px;
+    padding: 0;
+}
+.lbx-win td.td-score {
+    font-size: 30px;
+    padding-top: 10px;
+}
+.lbx-win td.td-share-buttons {
+    padding-top: 20px;
+}
+.lbx-win td.td-share-buttons a {
+    margin: 0 10px;
+}
+.lbx-win .buttons {
+    margin-top: 8px !important;
+}
+
+/** lbx-preloader **/
+.lbx-preloader-indicator {
+    width: 350px;
+}
+.lbx-preloader-indicator .body-cont {
+    font-size: 17px !important;
+}
+
+/** first-time **/
+.lbx-first-time {
+    height: 372px;
+    
+}
+.lbx-first-time .lbx-header {
+    font-size: 13px;
+}
+.lbx-first-time .tab-contents {
+    height: 328px;
+}
+.lbx-first-time .body-cont {
+    padding: 5px 0;
+}
+.lbx-first-time .slide-1 .slide-body p.list {
+    padding-top: 6px;
+}
+.lbx-first-time .slide-2 .slide-body p.list {
+    padding-top: 3px;
+}
+.lbx-first-time .slide-2 .slide-desc {
+    padding-bottom: 12px;
+}
+.lbx-first-time .slide-3 .slide-image {
+    padding: 36px 0 0 9px;
+}
+.lbx-first-time .slide-3 .slide-body {
+    padding: 27px 15px 0 10px;
+}
