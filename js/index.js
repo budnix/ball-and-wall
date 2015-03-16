@@ -64,6 +64,8 @@
                         $(event.target).parents('#cookie').remove();
                     });
                 }
+                // fork me
+                $('.fork-me').show();
             };
 
             if ( app.gameOptions.isLoaded() ) {
